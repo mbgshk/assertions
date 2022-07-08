@@ -21,4 +21,9 @@ describe('Browser Actions', () => {
     it('Should check correct url', () => {
         cy.url().should('include', 'example.com')
     });
+
+    // Check Element
+    it('Should check for correct element on the page', () => {
+        cy.get('h1').should('be.visible')
+    });
 });
